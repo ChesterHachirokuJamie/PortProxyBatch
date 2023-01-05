@@ -53,6 +53,6 @@ set /p ConnectIP=Enter a connected IP to remove:
 set /p ConnectPort=Enter a connected port to remove:
 netsh interface portproxy delete "%v4ORv6%" listenaddress="%ListenIP%" listenport="%ListenPort%" connectaddress="%ConnectIP%" connectport="%ConnectPort%"
 echo Results & netsh interface portproxy show all
-CHOICE /C YN /M "Press Y to add more, N to quit"
+CHOICE /C YN /M "Press Y to delete more, N to quit"
 if not errorlevel 2 if errorlevel 1 goto :3
 goto :EOF
